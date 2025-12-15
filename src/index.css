@@ -36,6 +36,12 @@
         src: url('../public/fonts/MTNIrancell-Medium.ttf');
     }
 }
+@layer base {
+    @font-face {
+        font-family: 'Oi-Regular';
+        src: url('../public/fonts/Oi-Regular.ttf');
+    }
+}
 
 @layer components {
     .title-gradient {
