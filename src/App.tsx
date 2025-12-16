@@ -1,7 +1,8 @@
-import { useRoutes } from "react-router-dom"
+import { useLocation, useRoutes } from "react-router-dom"
 import routes from "./Routes"
 import Header from "./components/Header"
 import ScreenContextProvider from "./context/screenContext"
+import { AnimatePresence } from "framer-motion";
 
 
 
@@ -9,18 +10,25 @@ import ScreenContextProvider from "./context/screenContext"
 function App() {
 
 
-  const router = useRoutes(routes)
+  const location = useLocation();
+  const router = useRoutes(routes, location)
+
 
 
   return (
     <>
       <ScreenContextProvider>
-        
 
-          <Header />
-          {router}
 
-        
+        <Header />
+
+        <AnimatePresence mode="wait">
+          <div key={location.pathname}>
+            {router}
+          </div>
+
+        </AnimatePresence>
+
 
       </ScreenContextProvider>
     </>

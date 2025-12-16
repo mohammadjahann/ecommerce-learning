@@ -67,10 +67,10 @@ const Header = () => {
   const navigation = (styles?: string) => {
     return (
       <ul className={` ${styles} gap-6 text-white`}>
-        <li><NavLink className={isActive} to={'/'}>خانه</NavLink></li>
+        <li><NavLink onClick={() => setShowSideMenu(false)} className={isActive} to={'/'}>خانه</NavLink></li>
         <li>دوره های آموزشی</li>
-        <li><NavLink className={isActive} to={'/courses'}>همه دوره ها</NavLink></li>
-        <li><NavLink className={isActive} to={'/articles'}>مقالات</NavLink></li>
+        <li><NavLink onClick={() => setShowSideMenu(false)} className={isActive} to={'/courses'}>همه دوره ها</NavLink></li>
+        <li><NavLink onClick={() => setShowSideMenu(false)} className={isActive} to={'/articles'}>مقالات</NavLink></li>
       </ul>
     )
   }
@@ -84,8 +84,13 @@ const Header = () => {
 
   return (
     <>
-      <div className='w-full fixed flex-col top-0 left-1/2 bg-primary-color dark:bg-slate-800 -translate-x-1/2 min-h-3 font-MTNIrancell-Medium z-10'>
-        <div className=' relative'>
+      <div className='w-full fixed flex-col top-0 left-1/2 bg-primary-color dark:bg-slate-800 -translate-x-1/2 min-h-3 font-MTNIrancell-Medium z-30'>
+        <motion.div 
+        className=' relative'
+        initial={{y:-80,opacity:0.3}}
+        animate={{y:0,opacity:1,}}
+        transition={{duration:1.5,type:'spring',stiffness:60}}
+       >
           <nav
             className=" w-[85%] mx-auto flex justify-between items-center p-2">
             <GiHamburgerMenu className=' block sm:hidden text-2xl cursor-pointer text-white' onClick={() => setShowSideMenu(true)} />
@@ -108,7 +113,7 @@ const Header = () => {
 
 
           </nav>
-        </div>
+        </motion.div>
 
 
 
