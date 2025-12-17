@@ -1,10 +1,14 @@
+import HeroSection from "../components/Home page/HeroSection"
+import PageWrapper from "../components/PageWrapper"
 
 
 const Home = () => {
     return (
         <>
-
-            Home
+            <PageWrapper>
+                <HeroSection/>
+                
+            </PageWrapper>
         </>
     )
 }

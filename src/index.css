@@ -2,49 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================= Fonts ================= */
 @layer base {
-    @font-face {
-        font-family: 'MTNIrancell-Bold';
-        src: url('../public/fonts/MTNIrancell-Bold.ttf');
-    }
+  @font-face {
+    font-family: 'MTNIrancell-Bold';
+    src: url('/fonts/MTNIrancell-Bold.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MTNIrancell-DemiBold';
+    src: url('/fonts/MTNIrancell-DemiBold.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MTNIrancell-ExtraLight';
+    src: url('/fonts/MTNIrancell-ExtraLight.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MTNIrancell-Light';
+    src: url('/fonts/MTNIrancell-Light.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MTNIrancell-Medium';
+    src: url('/fonts/MTNIrancell-Medium.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Oi-Regular';
+    src: url('/fonts/Oi-Regular.ttf') format('truetype');
+    font-display: swap;
+  }
 }
 
-@layer base {
-    @font-face {
-        font-family: 'MTNIrancell-DemiBold';
-        src: url('../public/fonts/MTNIrancell-DemiBold.ttf');
-    }
-}
-
-@layer base {
-    @font-face {
-        font-family: 'MTNIrancell-ExtraLight';
-        src: url('../public/fonts/MTNIrancell-ExtraLight.ttf');
-    }
-}
-
-@layer base {
-    @font-face {
-        font-family: 'MTNIrancell-Light';
-        src: url('../public/fonts/MTNIrancell-Light.ttf');
-    }
-}
-
-@layer base {
-    @font-face {
-        font-family: 'MTNIrancell-Medium';
-        src: url('../public/fonts/MTNIrancell-Medium.ttf');
-    }
-}
-@layer base {
-    @font-face {
-        font-family: 'Oi-Regular';
-        src: url('../public/fonts/Oi-Regular.ttf');
-    }
-}
-
+/* ================= Components ================= */
 @layer components {
-    .title-gradient {
-        @apply text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-800 bg-clip-text text-transparent;
-    }
+  .title-gradient {
+    @apply text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-800 bg-clip-text text-transparent;
+  }
+
+  .custom-shape-divider-bottom-1765819244 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom-1765819244 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    
+  }
+
+  
 }

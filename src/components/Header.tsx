@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence} from 'framer-motion'
 import PrimeryButton from './PrimeryButton'
 import { FaRegUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -58,6 +58,10 @@ const Header = () => {
       })
     }
 
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -88,15 +92,14 @@ const Header = () => {
         <motion.div 
         className=' relative'
         initial={{y:-80,opacity:0.3}}
-        animate={{y:0,opacity:1,}}
-        transition={{duration:1.5,type:'spring',stiffness:60}}
+        animate={{y:0,opacity:1,transition:{duration:1,type:'spring' ,stiffness:100}}}
        >
           <nav
             className=" w-[85%] mx-auto flex justify-between items-center p-2">
             <GiHamburgerMenu className=' block sm:hidden text-2xl cursor-pointer text-white' onClick={() => setShowSideMenu(true)} />
 
             <div className='hidden md:flex justify-center items-center gap-3 '>
-              <PrimeryButton styles='hidden md:flex'>
+              <PrimeryButton styles='hidden md:flex' src='/login'>
                 <FaRegUser />
                 عضویت | ورود
               </PrimeryButton>

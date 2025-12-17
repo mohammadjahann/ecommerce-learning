@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'esm': '328px'
+        'esm': '328px',
+        'msm': '500px'
       },
 
       fontFamily: {
