@@ -147,7 +147,7 @@ const Header = () => {
         className={`fixed top-0 left-0 bottom-0 text-center w-64 border-r-[1px] border-white bg-primary-color/80 dark:bg-slate-800/80 p-4 flex flex-col items-center gap-6 z-50 transform ${showSideMenu ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300`} >
         <RxCross2 className=' text-2xl text-white cursor-pointer' onClick={() => setShowSideMenu(false)} />
         {navigation('flex flex-col')}
-        <PrimeryButton>
+        <PrimeryButton src='/'>
           <FaRegUser />
           عضویت | ورود
         </PrimeryButton>

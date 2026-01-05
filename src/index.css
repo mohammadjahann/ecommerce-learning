@@ -44,7 +44,7 @@
 /* ================= Components ================= */
 @layer components {
   .title-gradient {
-    @apply text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-800 bg-clip-text text-transparent;
+    @apply text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-800 dark:from-teal-300 dark:to-indigo-500 bg-clip-text text-transparent transition-colors duration-300;
   }
 
   .custom-shape-divider-bottom-1765819244 {
@@ -60,8 +60,8 @@
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    
+
   }
 
-  
+
 }
