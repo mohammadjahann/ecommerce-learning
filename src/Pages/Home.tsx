@@ -1,5 +1,6 @@
 import HeroSection from "../components/Home page/HeroSection"
 import ResumeSction from "../components/Home page/ResumeSction"
+import Services from "../components/Home page/Services"
 import PageWrapper from "../components/PageWrapper"
 
 
@@ -10,6 +11,7 @@ const Home = () => {
             <PageWrapper>
                 <HeroSection />
                 <ResumeSction />
+                <Services/>
             </PageWrapper>
         </div>
         </>
