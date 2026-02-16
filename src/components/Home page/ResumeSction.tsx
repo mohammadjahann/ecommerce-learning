@@ -25,8 +25,6 @@ const ResumeSction = () => {
         if (entry.isIntersecting) {
           setStartCount(true)
           observer.disconnect() 
-          console.log(entry);
-          
         }
         
       },

@@ -63,5 +63,30 @@
 
   }
 
+  .hero-grid {
 
+    display: grid;
+    grid-template-columns: [bg-start] 5% [img-start] 40% [img-end] 10% [text-start] 40% [text-end] 5% [bg-end];
+    grid-template-rows: [bg-start] 10vh [img-start] 20vh [text-start] 60vh [text-end] 10vh [img-end bg-end] ;
+  }
+
+  .hero-img {
+    grid-column: img;
+    grid-row: img;
+  }
+
+  .hero-text {
+  grid-column:text ;
+  grid-row: text;
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: [bg-start] 10% [img-start text-start] 80% [img-end text-end] 10% [bg-end];
+    grid-template-rows:[bg-start] 25vh [text-start] 50vh [text-end] 35vh [img-start] 90vh [img-end bg-end] ;
+  }
 }
